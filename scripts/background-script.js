@@ -40,4 +40,8 @@ function newTabCreated(tabs) {
 	});	
 }
 
+if (typeof browser === 'undefined') {
+	browser = chrome;
+}
+
 browser.tabs.onCreated.addListener(newTabCreated);
